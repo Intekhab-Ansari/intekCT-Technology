@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 6 27 54;
+    --foreground: 255 255 255;
+  }
+
+  body {
+    background-color: #061B36;
+    color: #FFFFFF;
+    font-family: var(--font-sans), 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040D1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0B2240;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A1F;
+}
+
+/* Clean Human Glass Cards */
+.glass-card {
+  background: rgba(11, 34, 64, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(11, 34, 64, 0.85);
+  border-color: rgba(255, 90, 31, 0.4);
+  box-shadow: 0 0 25px -5px rgba(255, 90, 31, 0.25);
+  transform: translateY(-3px);
+}
+
+.glass-panel {
+  background: rgba(11, 34, 64, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 90, 31, 0.25);
+}
+
+/* Gradient Texts */
+.text-coral-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FF5A1F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyan-gradient {
+  background: linear-gradient(135deg, #00F2FE 0%, #0099FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Clean Node Connection Line Animation */
+@keyframes pulseLine {
+  0%, 100% { stroke-opacity: 0.3; stroke-dashoffset: 0; }
+  50% { stroke-opacity: 0.9; stroke-dashoffset: -10; }
+}
+
+.animate-pulse-line {
+  stroke-dasharray: 6;
+  animation: pulseLine 3s linear infinite;
+}
