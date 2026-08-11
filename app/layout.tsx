@@ -45,7 +45,11 @@ export const metadata: Metadata = {
     creator: "@intekct",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/logo.jpg", type: "image/jpeg" },
+    ],
+    apple: "/logo.jpg",
+    shortcut: "/logo.jpg",
   },
 };
 

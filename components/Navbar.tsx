@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Shield, Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Navbar: React.FC = () => {
@@ -32,7 +33,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-[300] transition-all duration-300">
       {/* Pure White Main Navigation Header */}
       <div
         className={`bg-white transition-all duration-300 border-b border-slate-200/90 ${
@@ -43,13 +44,18 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="#" className="group flex items-center gap-2.5">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#061B36] border border-[#00F2FE]/40 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                <Shield className="w-5 h-5 text-[#00F2FE]" />
-                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#FF5A1F]" />
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105 shadow-md">
+                <Image
+                  src="/logo.jpg"
+                  alt="IntekCT Technologies Logo"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold tracking-tight text-[#061B36] font-sans flex items-center gap-1">
-                  Intek<span className="text-[#00F2FE]">CT</span>
+                  Intek<span className="text-[#2563EB]">CT</span>
                 </span>
                 <span className="text-[10px] font-mono text-slate-500 tracking-wider uppercase -mt-1 font-semibold">
                   TECHNOLOGIES

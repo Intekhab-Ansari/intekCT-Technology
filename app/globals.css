@@ -73,6 +73,16 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Grid Pulse Animation — replaces Framer Motion in GlowingGridBg */
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.45; }
+}
+
+.animate-grid-pulse {
+  animation: gridPulse 8s ease-in-out infinite;
+}
+
 /* Clean Node Connection Line Animation */
 @keyframes pulseLine {
   0%, 100% { stroke-opacity: 0.3; stroke-dashoffset: 0; }
