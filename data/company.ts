@@ -3,7 +3,7 @@ export const companyData = {
   tagline: "We Build Websites & Apps. Secure From Day One.",
   subheadline: "Web and app development that brings your ideas to life — fast, reliable, and built to protect your business.",
   description: "IntekCT builds high-quality websites and web applications for businesses of all sizes, backed by strong security so your data and your customers are always protected.",
-  contactEmail: "contact@intekct.com",
+  contactEmail: "intekcttechnology@gmail.com",
   phone: "+91 9004575835",
   location: "San Francisco, CA & Remote Global",
   calendlyUrl: "https://cal.com/intekct/project-discovery",

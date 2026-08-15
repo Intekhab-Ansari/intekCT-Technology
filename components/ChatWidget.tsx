@@ -66,7 +66,7 @@ export const ChatWidget: React.FC = () => {
           ...prev,
           {
             role: "assistant",
-            content: data.fallbackMessage || "I encountered a minor issue. You can also reach our team directly at contact@intekct.com!",
+            content: data.fallbackMessage || "I encountered a minor issue. You can also reach our team directly at intekcttechnology@gmail.com!",
           },
         ]);
       }

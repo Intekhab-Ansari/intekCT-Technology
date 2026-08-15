@@ -53,7 +53,7 @@ export const FloatingActions: React.FC = () => {
       } else {
         setMessages((prev) => [
           ...prev,
-          { role: "assistant", content: data.fallbackMessage || "I encountered a minor issue. Please contact us directly at contact@intekct.com!" },
+          { role: "assistant", content: data.fallbackMessage || "I encountered a minor issue. Please contact us directly at intekcttechnology@gmail.com!" },
         ]);
       }
     } catch {
