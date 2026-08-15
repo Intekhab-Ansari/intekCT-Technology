@@ -4,7 +4,7 @@ import React from "react";
 // This removes ~40KB of JS from the initial render path.
 export const GlowingGridBg: React.FC = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#050A18]">
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#061B36]">
       {/* Top Center Main Cyan Glow Orb */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-[#00F2FE]/15 via-[#0099FF]/5 to-transparent blur-[120px] rounded-full" />
 

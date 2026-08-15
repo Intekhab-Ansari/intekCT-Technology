@@ -40,11 +40,14 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <h4 className="text-xs font-mono text-white font-bold uppercase tracking-wider">Navigation</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="#work" className="hover:text-white transition-colors">Our Work</a></li>
-              <li><a href="#process" className="hover:text-white transition-colors">Process</a></li>
-              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/our-work" className="hover:text-white transition-colors">Our Work</Link></li>
+              <li><Link href="/demo" className="hover:text-white transition-colors">Demo Sites</Link></li>
+              <li><Link href="/process" className="hover:text-white transition-colors">How We Work</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
@@ -52,11 +55,12 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <h4 className="text-xs font-mono text-white font-bold uppercase tracking-wider">Capabilities</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#services" className="hover:text-white transition-colors">Full Stack App Dev</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Penetration Testing</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Secure API Engineering</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Automated CI/CD Pipelines</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Cloud Security Infra</a></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Full Stack App Dev</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Penetration Testing</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Secure API Engineering</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Automated CI/CD Pipelines</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Cloud Security Infra</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Start a Project →</Link></li>
             </ul>
           </div>
 

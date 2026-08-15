@@ -20,21 +20,17 @@ export const Testimonials: React.FC = () => {
   const activeTestimonial = testimonialsData[currentIndex];
 
   return (
-    <section className="relative py-24 bg-[#F8FAFC]">
+    <section className="relative py-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200 border border-slate-300 text-slate-700 text-xs font-mono tracking-wider uppercase font-semibold">
             <span>Client Endorsements</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#061B36] tracking-tight">
-            Trusted By Engineering <br />
-            <span className="text-[#FF5A1F]">Founders & CTOs</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#061B36] tracking-tight">
+            Trusted By Founders &amp; <span className="text-[#FF5A1F]">CTOs</span>
           </h2>
-          <p className="text-lg text-slate-600">
-            See how IntekCT empowers high-growth startups and enterprises with hardened web applications.
-          </p>
         </div>
 
         {/* Testimonial Carousel Card */}

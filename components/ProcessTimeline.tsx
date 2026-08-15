@@ -26,20 +26,17 @@ export const ProcessTimeline: React.FC = () => {
   const activeStep = processData[activeStepIndex];
 
   return (
-    <section id="process" className="relative py-24 bg-[#F1F5F9]">
+    <section id="process" className="relative py-20 bg-[#F1F5F9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200 border border-slate-300 text-slate-700 text-xs font-mono tracking-wider uppercase font-semibold">
-            <span>Engineering & Security Lifecycle</span>
+            <span>How We Work</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#061B36] tracking-tight">
-            How We Build & <span className="text-[#FF5A1F]">Secure</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#061B36] tracking-tight">
+            Our Simple <span className="text-[#FF5A1F]">5-Step Process</span>
           </h2>
-          <p className="text-lg text-slate-600">
-            A 5-phase DevSecOps framework that ensures rapid feature delivery without opening your product to security exploits.
-          </p>
         </div>
 
         {/* Timeline Stepper Navigation */}
@@ -59,7 +56,7 @@ export const ProcessTimeline: React.FC = () => {
                 <button
                   key={step.stepNumber}
                   onClick={() => setActiveStepIndex(idx)}
-                  className={`flex flex-col items-center text-center p-4 rounded-xl transition-all duration-300 ${
+                  className={`flex flex-col items-center text-center p-3.5 rounded-xl transition-all duration-300 ${
                     isActive
                       ? "border-2 border-[#FF5A1F] shadow-lg bg-white"
                       : "border border-slate-200 bg-white/80 hover:bg-white text-slate-600"
@@ -100,7 +97,7 @@ export const ProcessTimeline: React.FC = () => {
                 {processIconMap[activeStep.iconName]}
               </div>
               <div>
-                <span className="text-xs font-mono text-[#FF5A1F] font-bold uppercase">PHASE {activeStep.stepNumber} OF 05</span>
+                <span className="text-xs font-mono text-[#FF5A1F] font-bold uppercase">STEP {activeStep.stepNumber} OF 05</span>
                 <h3 className="text-2xl font-bold text-[#061B36]">{activeStep.title}</h3>
               </div>
             </div>
@@ -112,7 +109,7 @@ export const ProcessTimeline: React.FC = () => {
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
               <div>
-                <span className="text-xs font-mono text-slate-500 block uppercase tracking-wide font-semibold">Security Defense Milestone</span>
+                <span className="text-xs font-mono text-slate-500 block uppercase tracking-wide font-semibold">What We Focus On</span>
                 <span className="text-sm font-semibold text-[#061B36] font-mono">{activeStep.securityFocus}</span>
               </div>
             </div>
@@ -120,10 +117,10 @@ export const ProcessTimeline: React.FC = () => {
 
           {/* Right Column: Key Deliverables List */}
           <div className="lg:col-span-5 bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-4">
-            <h4 className="text-sm font-bold text-[#061B36] uppercase tracking-wider font-mono flex items-center justify-between">
-              <span>Phase Deliverables</span>
-              <span className="text-[#FF5A1F] text-xs font-mono font-bold">Verified</span>
-            </h4>
+              <h4 className="text-sm font-bold text-[#061B36] uppercase tracking-wider font-mono flex items-center justify-between">
+                <span>What You Get</span>
+                <span className="text-[#FF5A1F] text-xs font-mono font-bold">Confirmed</span>
+              </h4>
 
             <ul className="space-y-3">
               {activeStep.deliverables.map((item, dIdx) => (

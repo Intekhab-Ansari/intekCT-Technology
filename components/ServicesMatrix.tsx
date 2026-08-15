@@ -25,21 +25,17 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export const ServicesMatrix: React.FC = () => {
   return (
-    <section id="services" className="relative py-24 bg-[#F8FAFC]">
+    <section id="services" className="relative py-20 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200/80 border border-slate-300 text-slate-700 text-xs font-mono tracking-wider uppercase font-semibold">
-            <span>Core Engineering Services</span>
+            <span>What We Do</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#061B36] tracking-tight">
-            Comprehensive Capabilities. <br />
-            <span className="text-[#FF5A1F]">Zero Compromise.</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#061B36] tracking-tight">
+            Everything Your Business Needs. <span className="text-[#FF5A1F]">Done Right.</span>
           </h2>
-          <p className="text-lg text-slate-600 font-normal leading-relaxed">
-            From modern web and mobile apps to automated SAST scanners and cloud threat shields, we engineer digital products built to scale securely.
-          </p>
         </div>
 
         {/* 6-Grid Clean White Cards */}
@@ -51,7 +47,7 @@ export const ServicesMatrix: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-2xl bg-white border border-slate-200/80 p-8 transition-all duration-300 hover:border-[#FF5A1F]/60 hover:shadow-xl hover:-translate-y-1.5 flex flex-col justify-between"
+              className="group relative rounded-2xl bg-white border border-slate-200/80 p-7 transition-all duration-300 hover:border-[#FF5A1F]/50 hover:shadow-lg hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
                 {/* Header: Icon & Badge */}
@@ -77,10 +73,10 @@ export const ServicesMatrix: React.FC = () => {
                 </p>
 
                 {/* Feature Bullet Points */}
-                <ul className="space-y-2.5 mb-8">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="flex items-center gap-2.5 text-xs text-slate-700 font-sans">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <li key={fIdx} className="flex items-center gap-2 text-xs text-slate-600">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -90,10 +86,10 @@ export const ServicesMatrix: React.FC = () => {
               {/* Action Link */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-xs font-bold text-[#FF5A1F] hover:text-[#061B36] transition-colors pt-4 border-t border-slate-100"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-[#FF5A1F] transition-colors pt-4 border-t border-slate-100"
               >
-                <span>Request Capability Specs</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                <span>Get in touch</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </motion.div>
           ))}

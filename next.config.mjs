@@ -3,20 +3,25 @@ const nextConfig = {
   reactStrictMode: true,
 
   // ── Compression ─────────────────────────────────────────────────────────────
-  // Enable gzip/brotli compression on all responses
   compress: true,
 
   // ── Security & perf headers ─────────────────────────────────────────────────
   poweredByHeader: false,
 
   // ── Compiler optimizations ───────────────────────────────────────────────────
-  // Use the faster SWC-based minifier (replaces slower Terser)
   swcMinify: true,
+
+  // ── Experimental performance ─────────────────────────────────────────────────
+  experimental: {
+    // Tree-shake lucide-react & framer-motion to only include used exports
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
 
   // ── Images ──────────────────────────────────────────────────────────────────
   images: {
-    // Enable modern image formats (WebP/AVIF) for smaller sizes
     formats: ["image/avif", "image/webp"],
+    // Reduce blur placeholder overhead
+    minimumCacheTTL: 86400,
     remotePatterns: [
       {
         protocol: "https",

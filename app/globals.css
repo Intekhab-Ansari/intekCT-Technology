@@ -13,6 +13,9 @@
     color: #FFFFFF;
     font-family: var(--font-sans), 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
     overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

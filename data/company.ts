@@ -1,13 +1,13 @@
 export const companyData = {
   name: "IntekCT",
-  tagline: "We Build Robust Web Software. Shielded From Day One.",
-  subheadline: "Full-stack web development and DevSecOps engineering to bring your visionary ideas to life securely.",
-  description: "IntekCT delivers high-performance full-stack web applications and cloud architecture backed by proactive threat protection and zero-trust engineering.",
+  tagline: "We Build Websites & Apps. Secure From Day One.",
+  subheadline: "Web and app development that brings your ideas to life — fast, reliable, and built to protect your business.",
+  description: "IntekCT builds high-quality websites and web applications for businesses of all sizes, backed by strong security so your data and your customers are always protected.",
   contactEmail: "contact@intekct.com",
   phone: "+91 9004575835",
   location: "San Francisco, CA & Remote Global",
   calendlyUrl: "https://cal.com/intekct/project-discovery",
-  systemStatus: "Systems Online",
+  systemStatus: "Online & Ready",
   socials: {
     github: "https://github.com/intekct",
     linkedin: "https://linkedin.com/company/intekct",
@@ -15,9 +15,9 @@ export const companyData = {
     discord: "https://discord.gg/intekct",
   },
   stats: [
-    { label: "Systems Uptime", value: "99.99%" },
-    { label: "Vulnerabilities Mitigated", value: "10,000+" },
-    { label: "Production Apps Deployed", value: "45+" },
-    { label: "Avg Lighthouse Score", value: "98/100" },
+    { label: "Website Uptime", value: "99.99%" },
+    { label: "Security Issues Fixed", value: "10,000+" },
+    { label: "Apps Launched", value: "45+" },
+    { label: "Happy Clients", value: "40+" },
   ],
 };

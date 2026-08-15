@@ -20,7 +20,7 @@ export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    budget: "$5k - $10k",
+    budget: "",
     service: "Full Stack App Development",
     message: "",
   });
@@ -49,7 +49,7 @@ export const ContactSection: React.FC = () => {
         setFormData({
           name: "",
           email: "",
-          budget: "$5k - $10k",
+          budget: "",
           service: "Full Stack App Development",
           message: "",
         });
@@ -64,7 +64,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 bg-[#041327]">
+    <section id="contact" className="relative py-16 bg-[#041327]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -82,8 +82,8 @@ export const ContactSection: React.FC = () => {
                 <span className="text-coral-gradient">Robust Software Solution?</span>
               </h2>
 
-              <p className="text-slate-300 text-base leading-relaxed">
-                Tell us about your application requirements, timeline, or security auditing goals. We respond to all project inquiries within 2 hours.
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Tell us about your requirements, timeline, or security goals. We respond within 2 hours.
               </p>
             </div>
 
@@ -188,19 +188,17 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-300 font-semibold">Estimated Budget</label>
-                  <select
+                  <label className="text-xs font-mono text-slate-300 font-semibold">Your Budget <span className="text-slate-500 font-normal">(optional)</span></label>
+                  <input
+                    type="text"
+                    placeholder="e.g. $3,000 or ₹80,000"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full bg-[#061B36] border border-slate-800 focus:border-[#FF5A1F] rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors"
-                  >
-                    <option value="<$5k">&lt; $5,000 USD</option>
-                    <option value="$5k - $10k">$5,000 - $10,000 USD (Starter/Growth)</option>
-                    <option value="$10k - $25k">$10,000 - $25,000 USD (Full Platform)</option>
-                    <option value="$25k+">$25,000+ USD (Enterprise Fortress)</option>
-                  </select>
+                    className="w-full bg-[#061B36] border border-slate-800 focus:border-[#FF5A1F] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
+                  />
                 </div>
 
                 <div className="space-y-2">

@@ -7,22 +7,18 @@ import { pricingData, PricingTier } from "@/data/pricing";
 
 export const PricingSection: React.FC = () => {
   return (
-    <section id="pricing" className="relative py-24 bg-[#061B36]">
+    <section id="pricing" className="relative py-16 bg-[#061B36]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B2240] border border-slate-700 text-slate-300 text-xs font-mono tracking-wider uppercase">
             <Zap className="w-3.5 h-3.5 text-[#FF5A1F]" />
-            <span>Flexible Project Packages</span>
+            <span>Simple Pricing</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Tailored Scope Packages. <br />
-            <span className="text-coral-gradient">Enterprise Security Included.</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Choose Your Package. <span className="text-coral-gradient">We Handle the Rest.</span>
           </h2>
-          <p className="text-lg text-slate-300">
-            Custom scope aligned with your product goals. Every package includes full-stack web engineering, threat mitigation, and automated CI/CD security pipelines.
-          </p>
         </div>
 
         {/* 3-Tier Packages Grid */}
@@ -47,7 +43,7 @@ export const PricingSection: React.FC = () => {
                 {isPopular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-coral text-white font-bold text-xs uppercase tracking-wider shadow-coral flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>Recommended DevSecOps Tier</span>
+                  <span>Most Popular Choice</span>
                   </div>
                 )}
 
@@ -68,7 +64,7 @@ export const PricingSection: React.FC = () => {
                   {/* Feature Checklist */}
                   <div className="space-y-3 py-6 border-t border-slate-800">
                     <span className="text-xs font-mono text-slate-300 uppercase tracking-wider block font-semibold">
-                      Included Capabilities:
+                      What&apos;s Included:
                     </span>
                     <ul className="space-y-2.5">
                       {tier.features.map((feat, fIdx) => (

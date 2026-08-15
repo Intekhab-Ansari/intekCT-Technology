@@ -17,22 +17,18 @@ export const CodeShieldShowcase: React.FC = () => {
   const [activeElement, setActiveElement] = useState<"auth" | "payment" | "data">("auth");
 
   return (
-    <section className="relative py-24 bg-[#041327] overflow-hidden">
+    <section className="relative py-16 bg-[#041327] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B2240] border border-slate-700 text-slate-300 text-xs font-mono tracking-wider uppercase">
             <ArrowRightLeft className="w-3.5 h-3.5 text-[#00F2FE]" />
-            <span>Dual-Layer Architecture</span>
+            <span>How We Protect Your App</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Seamless Frontend. <br />
-            <span className="text-coral-gradient">Unbreakable Security Shield.</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Beautiful Design. <span className="text-coral-gradient">Locked Down Security.</span>
           </h2>
-          <p className="text-lg text-slate-300">
-            Every elegant UI component built by IntekCT has a hardened zero-trust backend counterpart enforcing encryption and threat mitigation.
-          </p>
 
           {/* Selector Tabs */}
           <div className="flex justify-center gap-3 pt-4">
@@ -44,7 +40,7 @@ export const CodeShieldShowcase: React.FC = () => {
                   : "bg-[#0B2240] text-slate-400 hover:text-white"
               }`}
             >
-              1. OAuth2 & Identity
+              1. Login & Accounts
             </button>
             <button
               onClick={() => setActiveElement("payment")}
@@ -54,7 +50,7 @@ export const CodeShieldShowcase: React.FC = () => {
                   : "bg-[#0B2240] text-slate-400 hover:text-white"
               }`}
             >
-              2. Encrypted Checkout
+              2. Payments
             </button>
             <button
               onClick={() => setActiveElement("data")}
@@ -64,7 +60,7 @@ export const CodeShieldShowcase: React.FC = () => {
                   : "bg-[#0B2240] text-slate-400 hover:text-white"
               }`}
             >
-              3. Database Query
+              3. Data & Analytics
             </button>
           </div>
         </div>
