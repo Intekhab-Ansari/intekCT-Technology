@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { 
   Code2, 
@@ -84,13 +85,13 @@ export const ServicesMatrix: React.FC = () => {
               </div>
 
               {/* Action Link */}
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-[#FF5A1F] transition-colors pt-4 border-t border-slate-100"
               >
                 <span>Get in touch</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

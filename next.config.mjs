@@ -19,9 +19,7 @@ const nextConfig = {
 
   // ── Images ──────────────────────────────────────────────────────────────────
   images: {
-    formats: ["image/avif", "image/webp"],
-    // Reduce blur placeholder overhead
-    minimumCacheTTL: 86400,
+    unoptimized: true, // Loads directly from high-speed Unsplash Edge CDN without Node.js dev server lag
     remotePatterns: [
       {
         protocol: "https",
@@ -30,6 +28,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "via.placeholder.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
       },
     ],
   },

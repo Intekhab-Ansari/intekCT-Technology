@@ -34,6 +34,38 @@ interface LiveProject {
 
 const liveProjects: LiveProject[] = [
   {
+    id: "food-delivery-app",
+    title: "Food Delivery Platform",
+    subtitle: "Full-Featured Online Food Ordering & Delivery Web App",
+    category: "Food & Restaurant",
+    tag: "React",
+    tagColor: "#06B6D4",
+    description:
+      "A fast, modern online food ordering application featuring interactive digital menu cards, real-time cart drawer, category filters, and seamless user checkout. Deployed live on Vercel.",
+    techStack: ["React", "Next.js", "Tailwind CSS", "JavaScript", "Vercel"],
+    metrics: "100% Real-Time Fast Ordering",
+    badge: "⚡ Live Production App",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=75",
+    liveUrl: "https://food-delivery-intekhab.vercel.app/",
+    featured: true,
+  },
+  {
+    id: "intekhab-portfolio",
+    title: "Intekhab Ansari — Portfolio",
+    subtitle: "Lead Full-Stack Web Developer & Engineer Portfolio",
+    category: "Digital Agency",
+    tag: "Next.js",
+    tagColor: "#10B981",
+    description:
+      "Official portfolio website for Lead Software Engineer Intekhab Ansari. High-speed cyber theme, skill matrix, interactive previews, and sub-second load times.",
+    techStack: ["React", "Next.js", "JavaScript", "Java", "Tailwind CSS"],
+    metrics: "100/100 Lighthouse Performance",
+    badge: "⭐ Featured Engineer",
+    image: "/intekhab-developer.jpg",
+    liveUrl: "https://intekhab-ansari.vercel.app/",
+    featured: true,
+  },
+  {
     id: "tiffin-wales",
     title: "Tiffin Wales",
     subtitle: "Indian Tiffin Service – Cambridge & Boston, Massachusetts",
@@ -45,7 +77,7 @@ const liveProjects: LiveProject[] = [
     techStack: ["WordPress", "WooCommerce", "PHP", "SEO", "Custom Theme"],
     metrics: "#1 Google Ranked in USA",
     badge: "🏆 #1 Google Ranked in USA",
-    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=75",
     liveUrl: "https://tiffinwales.com",
     featured: true,
   },
@@ -60,7 +92,7 @@ const liveProjects: LiveProject[] = [
       "Business platform built with React and Vite frontend along with a custom PHP backend for performance analytics. High-conversion landing page, enterprise SEO, and custom CRM integrations.",
     techStack: ["React", "Vite", "PHP", "Tailwind CSS", "MySQL"],
     metrics: "+340% SEO Growth Delivered",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=75",
     liveUrl: "https://quantorra.com",
     featured: true,
   },
@@ -75,7 +107,7 @@ const liveProjects: LiveProject[] = [
       "A fully-featured clinic management website with real-time appointment booking, doctor profile pages, service listings, and a patient dashboard built on Next.js with Supabase.",
     techStack: ["Next.js 14", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
     metrics: "3x Patient Bookings Increase",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=75",
     liveUrl: "#",
     featured: false,
   },
@@ -90,7 +122,7 @@ const liveProjects: LiveProject[] = [
       "A sophisticated law firm web presence with practice area pages, attorney profiles, case study blog, consultation booking, and a dark premium aesthetic that instills client trust.",
     techStack: ["WordPress", "Elementor Pro", "PHP", "Advanced Custom Fields", "SEO"],
     metrics: "60% More Consultation Requests",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=75",
     liveUrl: "#",
     featured: false,
   },
@@ -105,7 +137,7 @@ const liveProjects: LiveProject[] = [
       "A headless Shopify storefront for a premium clothing brand with custom animations, wishlist, size guides, and a blazing-fast checkout experience that tripled their online revenue.",
     techStack: ["Shopify", "Hydrogen", "React", "GraphQL", "Tailwind CSS"],
     metrics: "3.8x Revenue Increase",
-    image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=600&q=75",
     liveUrl: "#",
     featured: false,
   },
@@ -356,13 +388,13 @@ export const OurWorkClient: React.FC = () => {
               Browse Demo Templates
               <ChevronRight className="w-4 h-4" />
             </Link>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#FF5A1F] hover:bg-[#E54A10] text-white font-bold transition-all shadow-coral-sm text-sm"
             >
               Start Your Project
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </motion.div>
       </section>

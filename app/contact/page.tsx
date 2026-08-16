@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import { ContactSection } from "@/components/ContactSection";
 
 export const metadata: Metadata = {
   title: "Contact | IntekCT Technologies",
@@ -12,21 +12,6 @@ export const metadata: Metadata = {
     url: "https://intekct.com/contact",
   },
 };
-
-// ─── Loading Skeleton ──────────────────────────────────────────────────────────
-const SectionSkeleton = ({ height = "400px" }: { height?: string }) => (
-  <div className="w-full flex items-center justify-center" style={{ minHeight: height }}>
-    <div className="flex flex-col items-center gap-3">
-      <div className="w-10 h-10 rounded-full border-2 border-[#00F2FE]/30 border-t-[#00F2FE] animate-spin" />
-      <span className="text-xs font-mono text-slate-400 animate-pulse">Loading…</span>
-    </div>
-  </div>
-);
-
-const ContactSection = dynamic(
-  () => import("@/components/ContactSection").then((m) => ({ default: m.ContactSection })),
-  { loading: () => <SectionSkeleton height="480px" />, ssr: false }
-);
 
 export default function ContactPage() {
   return (
@@ -44,8 +29,8 @@ export default function ContactPage() {
             Start a <span className="text-coral-gradient">Project</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Tell us about your idea. We&apos;ll follow up within 24 hours with a
-            clear plan and honest estimate.
+            Tell us about your idea. We&apos;ll follow up within 2 hours with a
+            clear plan, mobile consultation, and honest estimate.
           </p>
         </div>
       </section>

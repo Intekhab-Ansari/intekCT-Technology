@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { WhatWeBuild } from "@/components/WhatWeBuild";
+import { HomeLiveWork } from "@/components/HomeLiveWork";
+import { HomeDemoWebsites } from "@/components/HomeDemoWebsites";
 import {
   Code2,
   GitBranch,
@@ -79,6 +82,15 @@ export default function Home() {
     <div>
       {/* Hero — eager, above the fold */}
       <Hero />
+
+      {/* What We Build — Core Services & Expertise */}
+      <WhatWeBuild />
+
+      {/* 1. Our Live Work — Production Projects & Case Studies */}
+      <HomeLiveWork />
+
+      {/* 2. Ready-Made Demo Websites — Industry Templates with Live Previews */}
+      <HomeDemoWebsites />
 
       {/* Quick-Nav Strip */}
       <section className="relative py-20 bg-[#040D1A]">

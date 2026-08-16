@@ -23,6 +23,7 @@ import {
   CheckCircle,
   ChevronRight,
   Globe,
+  Search,
 } from "lucide-react";
 
 interface DemoSite {
@@ -64,8 +65,8 @@ const demoSites: DemoSite[] = [
       "WhatsApp Chat Integration",
       "Mobile Responsive",
     ],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/doctor",
     techStack: ["Next.js", "Tailwind CSS", "Calendly API", "Vercel"],
     deliveryTime: "5–7 Days",
     priceFrom: "₹15,000",
@@ -91,8 +92,8 @@ const demoSites: DemoSite[] = [
       "Client Portal Link",
       "SEO Optimized",
     ],
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/advocate",
     techStack: ["WordPress", "PHP", "Custom Theme", "ACF"],
     deliveryTime: "7–10 Days",
     priceFrom: "₹18,000",
@@ -118,8 +119,8 @@ const demoSites: DemoSite[] = [
       "Instagram Feed Integration",
       "Google Reviews Widget",
     ],
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/restaurant",
     techStack: ["Next.js", "Stripe", "Tailwind CSS", "Sanity CMS"],
     deliveryTime: "5–8 Days",
     priceFrom: "₹12,000",
@@ -144,8 +145,8 @@ const demoSites: DemoSite[] = [
       "Inventory Management",
       "Discount / Coupon System",
     ],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/ecommerce",
     techStack: ["Next.js", "Razorpay", "PostgreSQL", "Prisma"],
     deliveryTime: "10–14 Days",
     priceFrom: "₹25,000",
@@ -171,8 +172,8 @@ const demoSites: DemoSite[] = [
       "EMI Calculator",
       "Mobile App Ready",
     ],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/real-estate",
     techStack: ["Next.js", "Mapbox", "Supabase", "Tailwind CSS"],
     deliveryTime: "8–12 Days",
     priceFrom: "₹20,000",
@@ -197,8 +198,8 @@ const demoSites: DemoSite[] = [
       "Alumni Section",
       "Live Class Link Integration",
     ],
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/doctor",
     techStack: ["WordPress", "LMS Plugin", "PHP", "Elementor"],
     deliveryTime: "7–10 Days",
     priceFrom: "₹14,000",
@@ -223,8 +224,8 @@ const demoSites: DemoSite[] = [
       "Blog / Fitness Tips",
       "WhatsApp Integration",
     ],
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=75",
+    demoUrl: "/demo/gym",
     techStack: ["Next.js", "Razorpay", "Tailwind CSS", "Framer Motion"],
     deliveryTime: "5–7 Days",
     priceFrom: "₹13,000",
@@ -249,7 +250,7 @@ const demoSites: DemoSite[] = [
       "Client Testimonials",
       "Instagram Feed",
     ],
-    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=600&q=75",
     demoUrl: "#",
     techStack: ["Next.js", "Framer Motion", "Cloudinary", "Tailwind CSS"],
     deliveryTime: "5–7 Days",
@@ -275,7 +276,7 @@ const demoSites: DemoSite[] = [
       "Awards & Certifications",
       "Multi-language Ready",
     ],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=75",
     demoUrl: "#",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     deliveryTime: "7–10 Days",
@@ -283,29 +284,30 @@ const demoSites: DemoSite[] = [
   },
   {
     id: "portfolio",
-    name: "Personal Portfolio",
+    name: "Meet Your Developer / Portfolio",
     category: "Creative",
     icon: <Briefcase className="w-5 h-5" />,
     iconBg: "from-cyan-500 to-blue-500",
-    accentColor: "#06B6D4",
-    tagline: "Stand-out personal portfolio to land your dream opportunities",
+    accentColor: "#00F2FE",
+    tagline: "Intekhab Ansari – Full Stack Web Developer & Software Engineer",
     description:
-      "A modern, animated personal portfolio with hero section, skills showcase, project cards, timeline, testimonials, and a contact form.",
+      "Official live portfolio of Intekhab Ansari. Features interactive cyber design, project showcases, skill matrix, and high-performance React architecture.",
     features: [
-      "Animated Hero Section",
-      "Skills & Tech Stack",
-      "Project Showcase",
-      "Work Timeline",
-      "Testimonials",
-      "Resume Download",
-      "Contact Form",
-      "Dark / Light Mode",
+      "Live Portfolio Showcase",
+      "React, Java & Next.js Stack",
+      "Interactive Cyber Aesthetics",
+      "Direct Freelance Booking",
+      "Full Stack Capabilities",
+      "SEO & Security Hardened",
+      "Fast Performance",
+      "Responsive on All Screens",
     ],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-    demoUrl: "#",
-    techStack: ["Next.js", "Framer Motion", "TypeScript", "Tailwind"],
+    image: "/intekhab-developer.jpg",
+    demoUrl: "https://intekhab-ansari.vercel.app/",
+    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     deliveryTime: "3–5 Days",
-    priceFrom: "₹8,000",
+    priceFrom: "₹12,000",
+    popular: true,
   },
 ];
 
@@ -324,17 +326,24 @@ const categoryFilters = [
 
 export const DemoClient: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-  const filtered =
-    activeCategory === "All"
-      ? demoSites
-      : demoSites.filter((d) => d.category === activeCategory);
+  const filtered = demoSites
+    .filter((d) => (activeCategory === "All" ? true : d.category === activeCategory))
+    .filter((d) =>
+      searchQuery
+        ? d.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          d.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          d.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          d.tagline.toLowerCase().includes(searchQuery.toLowerCase())
+        : true
+    );
 
   return (
     <div className="min-h-screen bg-[#061B36]">
       {/* ── Hero ───────────────────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      <section className="relative pt-32 pb-12 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-[#2563EB]/10 via-[#FF5A1F]/8 to-transparent rounded-full blur-[100px]" />
         </div>
@@ -352,32 +361,51 @@ export const DemoClient: React.FC = () => {
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none">
-              See What We{" "}
-              <span className="text-[#FF5A1F]">Build</span>
+              Interactive{" "}
+              <span className="text-[#FF5A1F]">Demo Websites</span>
             </h1>
 
             <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Browse our demo websites by industry. Every template is fully
-              customized to match your brand — we don't do one-size-fits-all.
+              Experience live, fully functional websites for doctors, advocates, restaurants, e-commerce, and real estate. Click preview on any demo to test drive.
             </p>
 
+            {/* Live Search Bar */}
+            <div className="max-w-xl mx-auto p-2 rounded-2xl bg-[#0B2240] border border-white/15 shadow-xl flex items-center gap-2">
+              <Search className="w-5 h-5 text-slate-400 ml-3 shrink-0" />
+              <input
+                type="text"
+                placeholder="Search templates (e.g. Doctor, Law firm, Restaurant, Store, Gym)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-transparent text-sm text-white placeholder-slate-400 focus:outline-none py-1.5 px-2"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="text-xs text-slate-400 hover:text-white px-2 font-mono"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+
             {/* Quick Action Buttons */}
-            <div className="flex flex-wrap gap-3 justify-center pt-4">
+            <div className="flex flex-wrap gap-3 justify-center pt-2">
               <Link
                 href="/our-work"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-white hover:border-[#FF5A1F]/50 transition-all"
               >
                 <Globe className="w-4 h-4 text-[#FF5A1F]" />
-                View Live Projects
+                View Live Client Projects
                 <ChevronRight className="w-4 h-4 text-slate-500" />
               </Link>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF5A1F] hover:bg-[#E54A10] text-sm font-bold text-white transition-all shadow-coral-sm"
               >
-                Request Your Demo
+                Request Custom Website
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -543,8 +571,8 @@ export const DemoClient: React.FC = () => {
                         <Eye className="w-3.5 h-3.5" />
                         Preview
                       </a>
-                      <a
-                        href={`#contact?template=${site.id}`}
+                      <Link
+                        href={`/contact?template=${site.id}`}
                         className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold text-white transition-all"
                         style={{
                           background: `linear-gradient(135deg, ${site.accentColor}, ${site.accentColor}cc)`,
@@ -552,7 +580,7 @@ export const DemoClient: React.FC = () => {
                       >
                         <MessageSquare className="w-3.5 h-3.5" />
                         Get This
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -590,18 +618,20 @@ export const DemoClient: React.FC = () => {
                 we'll send you a free quote in 24 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#FF5A1F] hover:bg-[#E54A10] text-white font-bold transition-all shadow-coral text-sm"
                 >
                   Request a Free Quote
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
                 <a
-                  href="https://wa.me/your-number"
+                  href="https://wa.me/919594292262?text=Hello%20IntekCT,%20I%20want%20to%20request%20a%20website%20quote."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/5 border border-white/15 text-white font-bold hover:border-[#FF5A1F]/50 hover:text-[#FF5A1F] transition-all text-sm"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4 text-emerald-400" />
                   Chat on WhatsApp
                 </a>
               </div>

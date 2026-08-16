@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import { PricingSection } from "@/components/PricingSection";
 
 export const metadata: Metadata = {
   title: "Pricing | IntekCT Technologies",
@@ -12,21 +12,6 @@ export const metadata: Metadata = {
     url: "https://intekct.com/pricing",
   },
 };
-
-// ─── Loading Skeleton ──────────────────────────────────────────────────────────
-const SectionSkeleton = ({ height = "400px" }: { height?: string }) => (
-  <div className="w-full flex items-center justify-center" style={{ minHeight: height }}>
-    <div className="flex flex-col items-center gap-3">
-      <div className="w-10 h-10 rounded-full border-2 border-[#00F2FE]/30 border-t-[#00F2FE] animate-spin" />
-      <span className="text-xs font-mono text-slate-400 animate-pulse">Loading…</span>
-    </div>
-  </div>
-);
-
-const PricingSection = dynamic(
-  () => import("@/components/PricingSection").then((m) => ({ default: m.PricingSection })),
-  { loading: () => <SectionSkeleton height="600px" />, ssr: false }
-);
 
 export default function PricingPage() {
   return (

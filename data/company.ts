@@ -4,15 +4,17 @@ export const companyData = {
   subheadline: "Web and app development that brings your ideas to life — fast, reliable, and built to protect your business.",
   description: "IntekCT builds high-quality websites and web applications for businesses of all sizes, backed by strong security so your data and your customers are always protected.",
   contactEmail: "intekcttechnology@gmail.com",
-  phone: "+91 9004575835",
+  phone: "+91 9594292262",
   location: "San Francisco, CA & Remote Global",
   calendlyUrl: "https://cal.com/intekct/project-discovery",
   systemStatus: "Online & Ready",
+  whatsappUrl: "https://wa.me/919594292262",
   socials: {
     github: "https://github.com/intekct",
     linkedin: "https://linkedin.com/company/intekct",
     twitter: "https://twitter.com/intekct",
     discord: "https://discord.gg/intekct",
+    whatsapp: "https://wa.me/919594292262",
   },
   stats: [
     { label: "Website Uptime", value: "99.99%" },

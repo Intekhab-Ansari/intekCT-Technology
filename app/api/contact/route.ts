@@ -3,12 +3,12 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, budget, message, service } = body;
+    const { name, email, phone, budget, message, service } = body;
 
     // Server-side validation
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !message) {
       return NextResponse.json(
-        { error: "Name, email, and message fields are required." },
+        { error: "Name, email, phone number, and message fields are required." },
         { status: 400 }
       );
     }
@@ -25,6 +25,7 @@ export async function POST(req: Request) {
     console.log("New IntekCT Lead Submission:", {
       name,
       email,
+      phone,
       budget: budget || "Not specified",
       service: service || "General inquiry",
       messageLength: message.length,

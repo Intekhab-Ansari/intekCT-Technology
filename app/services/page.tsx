@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import { ServicesMatrix } from "@/components/ServicesMatrix";
+import { CodeShieldShowcase } from "@/components/CodeShieldShowcase";
 
 export const metadata: Metadata = {
   title: "Services | IntekCT Technologies",
@@ -12,26 +13,6 @@ export const metadata: Metadata = {
     url: "https://intekct.com/services",
   },
 };
-
-// ─── Loading Skeleton ──────────────────────────────────────────────────────────
-const SectionSkeleton = ({ height = "400px" }: { height?: string }) => (
-  <div className="w-full flex items-center justify-center" style={{ minHeight: height }}>
-    <div className="flex flex-col items-center gap-3">
-      <div className="w-10 h-10 rounded-full border-2 border-[#00F2FE]/30 border-t-[#00F2FE] animate-spin" />
-      <span className="text-xs font-mono text-slate-400 animate-pulse">Loading…</span>
-    </div>
-  </div>
-);
-
-const ServicesMatrix = dynamic(
-  () => import("@/components/ServicesMatrix").then((m) => ({ default: m.ServicesMatrix })),
-  { loading: () => <SectionSkeleton height="480px" />, ssr: false }
-);
-
-const CodeShieldShowcase = dynamic(
-  () => import("@/components/CodeShieldShowcase").then((m) => ({ default: m.CodeShieldShowcase })),
-  { loading: () => <SectionSkeleton height="500px" />, ssr: false }
-);
 
 export default function ServicesPage() {
   return (

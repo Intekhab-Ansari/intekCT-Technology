@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Zap, Sparkles } from "lucide-react";
 import { pricingData, PricingTier } from "@/data/pricing";
@@ -85,8 +86,8 @@ export const PricingSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <div className="pt-6 border-t border-slate-800">
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/contact"
                     className={`w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-sm transition-all duration-300 ${
                       isPopular
                         ? "bg-coral text-white hover:bg-coral-hover shadow-coral"
@@ -95,7 +96,7 @@ export const PricingSection: React.FC = () => {
                   >
                     <span>{tier.ctaText}</span>
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             );

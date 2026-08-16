@@ -1,42 +1,8 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-export const metadata: Metadata = {
-  title: "About Us | IntekCT Technologies",
-  description:
-    "Learn why clients choose IntekCT — our values, what sets us apart, our AI-powered tools, and what our clients say about working with us.",
-  openGraph: {
-    title: "About Us | IntekCT Technologies",
-    description:
-      "What makes IntekCT different — security-first culture, AI-enhanced workflows, and happy clients.",
-    url: "https://intekct.com/about",
-  },
-};
-
-// ─── Loading Skeleton ──────────────────────────────────────────────────────────
-const SectionSkeleton = ({ height = "400px" }: { height?: string }) => (
-  <div className="w-full flex items-center justify-center" style={{ minHeight: height }}>
-    <div className="flex flex-col items-center gap-3">
-      <div className="w-10 h-10 rounded-full border-2 border-[#00F2FE]/30 border-t-[#00F2FE] animate-spin" />
-      <span className="text-xs font-mono text-slate-400 animate-pulse">Loading…</span>
-    </div>
-  </div>
-);
-
-const WhyIntekCT = dynamic(
-  () => import("@/components/WhyIntekCT").then((m) => ({ default: m.WhyIntekCT })),
-  { loading: () => <SectionSkeleton height="360px" />, ssr: false }
-);
-
-const Testimonials = dynamic(
-  () => import("@/components/Testimonials").then((m) => ({ default: m.Testimonials })),
-  { loading: () => <SectionSkeleton height="360px" />, ssr: false }
-);
-
-const AIAssistantSection = dynamic(
-  () => import("@/components/AIAssistantSection").then((m) => ({ default: m.AIAssistantSection })),
-  { loading: () => <SectionSkeleton height="360px" />, ssr: false }
-);
+import { WhyIntekCT } from "@/components/WhyIntekCT";
+import { MeetDeveloper } from "@/components/MeetDeveloper";
+import { Testimonials } from "@/components/Testimonials";
+import { AIAssistantSection } from "@/components/AIAssistantSection";
 
 export default function AboutPage() {
   return (
@@ -59,6 +25,9 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+
+      {/* Meet Your Developer Showcase */}
+      <MeetDeveloper />
 
       <WhyIntekCT />
       <Testimonials />

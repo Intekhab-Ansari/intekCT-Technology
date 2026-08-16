@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { motion } from "framer-motion";
+import { useSearchParams } from "next/navigation";
 import { 
   Send, 
   Calendar, 
@@ -10,20 +11,42 @@ import {
   AlertCircle, 
   ShieldCheck, 
   Clock,
+  Phone,
+  MessageSquare,
   Github,
   Linkedin,
   Twitter
 } from "lucide-react";
 import { companyData } from "@/data/company";
 
-export const ContactSection: React.FC = () => {
+const ContactFormInner: React.FC = () => {
+  const searchParams = useSearchParams();
+  const templateParam = searchParams.get("template");
+  const serviceParam = searchParams.get("service");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     budget: "",
-    service: "Full Stack App Development",
+    service: "Full Stack Web App Development",
     message: "",
   });
+
+  useEffect(() => {
+    if (templateParam) {
+      setFormData((prev) => ({
+        ...prev,
+        service: `Demo Website Customization (${templateParam})`,
+        message: prev.message || `Hello IntekCT team, I am interested in customizing the "${templateParam}" demo website template for my business. Please share details and pricing.`,
+      }));
+    } else if (serviceParam) {
+      setFormData((prev) => ({
+        ...prev,
+        service: serviceParam,
+      }));
+    }
+  }, [templateParam, serviceParam]);
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -49,8 +72,9 @@ export const ContactSection: React.FC = () => {
         setFormData({
           name: "",
           email: "",
+          phone: "",
           budget: "",
-          service: "Full Stack App Development",
+          service: "Full Stack Web App Development",
           message: "",
         });
       } else {
@@ -59,7 +83,7 @@ export const ContactSection: React.FC = () => {
       }
     } catch (err) {
       setStatus("error");
-      setErrorMessage("Network connection issue. Please try again or use Calendly link.");
+      setErrorMessage("Network connection issue. Please try again or use WhatsApp.");
     }
   };
 
@@ -87,15 +111,42 @@ export const ContactSection: React.FC = () => {
               </p>
             </div>
 
+            {/* WhatsApp Quick Connect Card */}
+            <div className="rounded-2xl bg-[#0B2240] border border-emerald-500/30 p-6 space-y-4 shadow-xl">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-white font-bold text-base">
+                  <MessageSquare className="w-5 h-5 text-emerald-400" />
+                  <span>Instant WhatsApp Connect</span>
+                </div>
+                <span className="text-[10px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/20">
+                  Fastest Response
+                </span>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Prefer chatting directly? Message our engineering desk for immediate estimates and project consultation.
+              </p>
+
+              <a
+                href="https://wa.me/919594292262?text=Hello%20IntekCT,%20I%20want%20to%20discuss%20a%20new%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg transition-colors"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>Chat on WhatsApp: +91 9594292262</span>
+              </a>
+            </div>
+
             {/* Instant Calendar Booking Box */}
             <div className="rounded-2xl bg-[#0B2240] border border-slate-800 p-6 space-y-4 shadow-xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-white font-bold text-base">
                   <Calendar className="w-5 h-5 text-[#FF5A1F]" />
-                  <span>Prefer an Instant Video Call?</span>
+                  <span>Prefer a Video Discovery Call?</span>
                 </div>
                 <span className="text-[10px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/20">
-                  20 Min Discovery
+                  20 Min Call
                 </span>
               </div>
 
@@ -116,6 +167,10 @@ export const ContactSection: React.FC = () => {
 
             {/* Direct Contact Info */}
             <div className="space-y-3 font-mono text-xs text-slate-300 pt-2">
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-emerald-400" />
+                <span>Call / WhatsApp: +91 95942 92262</span>
+              </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#FF5A1F]" />
                 <span>{companyData.contactEmail}</span>
@@ -188,33 +243,53 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-
+              {/* Mobile Phone & Budget Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-300 font-semibold">Your Budget <span className="text-slate-500 font-normal">(optional)</span></label>
+                  <label className="text-xs font-mono text-slate-300 font-semibold flex items-center gap-1.5">
+                    <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Mobile / WhatsApp Number *</span>
+                  </label>
                   <input
-                    type="text"
-                    placeholder="e.g. $3,000 or ₹80,000"
-                    value={formData.budget}
-                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                    type="tel"
+                    required
+                    placeholder="e.g. +91 95942 92262"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full bg-[#061B36] border border-slate-800 focus:border-[#FF5A1F] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-300 font-semibold">Primary Service Needed</label>
-                  <select
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full bg-[#061B36] border border-slate-800 focus:border-[#FF5A1F] rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors"
-                  >
-                    <option value="Full Stack App Development">Full Stack Web App Development</option>
-                    <option value="Penetration Testing & Security Audit">Penetration Testing & Vulnerability Audit</option>
-                    <option value="DevSecOps & CI/CD Pipeline">DevSecOps & CI/CD Pipeline Automation</option>
-                    <option value="AI Assistant & LLM Tool Integration">AI Assistant Integration</option>
-                    <option value="Other Custom Project">Other Custom Engineering</option>
-                  </select>
+                  <label className="text-xs font-mono text-slate-300 font-semibold">Your Budget <span className="text-slate-500 font-normal">(optional)</span></label>
+                  <input
+                    type="text"
+                    placeholder="e.g. $3,000 or ₹50,000"
+                    value={formData.budget}
+                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                    className="w-full bg-[#061B36] border border-slate-800 focus:border-[#FF5A1F] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
+                  />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs font-mono text-slate-300 font-semibold">Primary Service / Template Needed</label>
+                <select
+                  value={formData.service}
+                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                  className="w-full bg-[#061B36] border border-slate-800 focus:border-[#FF5A1F] rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors"
+                >
+                  <option value="Full Stack Web App Development">Full Stack Web App Development</option>
+                  <option value="Demo Website Customization (Doctor / Clinic)">Demo Website Customization: Doctor / Clinic</option>
+                  <option value="Demo Website Customization (Advocate / Law Firm)">Demo Website Customization: Advocate / Law Firm</option>
+                  <option value="Demo Website Customization (Restaurant / Café)">Demo Website Customization: Restaurant / Café</option>
+                  <option value="Demo Website Customization (E-Commerce Store)">Demo Website Customization: E-Commerce Store</option>
+                  <option value="Demo Website Customization (Real Estate Agency)">Demo Website Customization: Real Estate Agency</option>
+                  <option value="Demo Website Customization (Gym & Fitness)">Demo Website Customization: Gym & Fitness</option>
+                  <option value="Penetration Testing & Security Audit">Penetration Testing & Vulnerability Audit</option>
+                  <option value="Mobile App Development">Mobile App Development</option>
+                  <option value="Other Custom Project">Other Custom Project</option>
+                </select>
               </div>
 
               <div className="space-y-2">
@@ -267,5 +342,19 @@ export const ContactSection: React.FC = () => {
 
       </div>
     </section>
+  );
+};
+
+export const ContactSection: React.FC = () => {
+  return (
+    <Suspense
+      fallback={
+        <div className="py-20 text-center text-slate-400 font-mono text-xs">
+          Loading contact form...
+        </div>
+      }
+    >
+      <ContactFormInner />
+    </Suspense>
   );
 };

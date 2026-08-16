@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import { FAQSection } from "@/components/FAQSection";
 
 export const metadata: Metadata = {
   title: "FAQ | IntekCT Technologies",
@@ -12,21 +12,6 @@ export const metadata: Metadata = {
     url: "https://intekct.com/faq",
   },
 };
-
-// ─── Loading Skeleton ──────────────────────────────────────────────────────────
-const SectionSkeleton = ({ height = "400px" }: { height?: string }) => (
-  <div className="w-full flex items-center justify-center" style={{ minHeight: height }}>
-    <div className="flex flex-col items-center gap-3">
-      <div className="w-10 h-10 rounded-full border-2 border-[#00F2FE]/30 border-t-[#00F2FE] animate-spin" />
-      <span className="text-xs font-mono text-slate-400 animate-pulse">Loading…</span>
-    </div>
-  </div>
-);
-
-const FAQSection = dynamic(
-  () => import("@/components/FAQSection").then((m) => ({ default: m.FAQSection })),
-  { loading: () => <SectionSkeleton height="400px" />, ssr: false }
-);
 
 export default function FAQPage() {
   return (
