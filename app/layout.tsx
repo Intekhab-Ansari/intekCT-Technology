@@ -83,6 +83,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
   icons: {
     icon: [{ url: "/logo.jpg", type: "image/jpeg" }],
     apple: "/logo.jpg",
@@ -97,12 +100,24 @@ const jsonLdSchema = {
       "@type": "Organization",
       "@id": "https://intekct.com/#organization",
       name: "IntekCT Technologies",
+      alternateName: ["IntekCT", "Intek CT", "IntekCT Web Development", "intekct.com"],
       url: "https://intekct.com",
       logo: "https://intekct.com/logo.jpg",
+      brand: {
+        "@type": "Brand",
+        name: "IntekCT",
+        alternateName: ["IntekCT Technologies", "Intek CT"],
+      },
       sameAs: [
         "https://intekhab-ansari.vercel.app/",
         "https://github.com/Intekhab-Ansari",
       ],
+      founder: {
+        "@type": "Person",
+        name: "Intekhab Ansari",
+        jobTitle: "Lead Full-Stack Web Developer & Security Engineer",
+        url: "https://intekhab-ansari.vercel.app/",
+      },
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+91-9594292262",
@@ -115,6 +130,7 @@ const jsonLdSchema = {
       "@type": "ProfessionalService",
       "@id": "https://intekct.com/#service",
       name: "IntekCT Web Development & DevSecOps",
+      alternateName: "IntekCT",
       url: "https://intekct.com",
       telephone: "+91-9594292262",
       address: {
@@ -131,6 +147,7 @@ const jsonLdSchema = {
       "@id": "https://intekct.com/#website",
       url: "https://intekct.com",
       name: "IntekCT Technologies",
+      alternateName: "IntekCT",
       description: "We Build Robust Web Software. Shielded From Day One.",
       publisher: {
         "@id": "https://intekct.com/#organization",
