@@ -112,9 +112,10 @@ export async function generateAIResponse(messages: ChatMessage[]): Promise<strin
   }
 
   if (lastUserMessage.includes("book") || lastUserMessage.includes("contact") || lastUserMessage.includes("call") || lastUserMessage.includes("hire") || lastUserMessage.includes("demo")) {
-    return "Awesome! We'd love to partner with you. You can schedule a 20-minute discovery call directly with our lead architects here:\n\n" +
-      "🔗 **[Book a Project Discovery Call](https://cal.com/intekct/project-discovery)**\n\n" +
-      "Or fill out our contact form on the page below and we will get back to you within 2 hours!";
+    return "Awesome! We'd love to partner with you. You can connect with us directly:\n\n" +
+      "📱 **WhatsApp / Call**: [+91 95942 92262](https://wa.me/919594292262)\n" +
+      "✉️ **Email**: intekcttechnology@gmail.com\n\n" +
+      "Or fill out our contact form on the page and we will get back to you within 2 hours!";
   }
 
   return "Welcome to IntekCT! I am your AI Assistant capability demo.\n\n" +

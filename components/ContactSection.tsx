@@ -138,33 +138,6 @@ const ContactFormInner: React.FC = () => {
               </a>
             </div>
 
-            {/* Instant Calendar Booking Box */}
-            <div className="rounded-2xl bg-[#0B2240] border border-slate-800 p-6 space-y-4 shadow-xl">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-white font-bold text-base">
-                  <Calendar className="w-5 h-5 text-[#FF5A1F]" />
-                  <span>Prefer a Video Discovery Call?</span>
-                </div>
-                <span className="text-[10px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/20">
-                  20 Min Call
-                </span>
-              </div>
-
-              <p className="text-xs text-slate-300">
-                Book a direct discovery meeting with our lead full-stack & cybersecurity architect on Cal.com.
-              </p>
-
-              <a
-                href={companyData.calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#061B36] hover:bg-[#082245] text-white font-mono text-xs border border-slate-700 hover:border-[#FF5A1F] transition-colors"
-              >
-                <span>Schedule Call on Cal.com</span>
-                <Clock className="w-4 h-4 text-[#FF5A1F]" />
-              </a>
-            </div>
-
             {/* Direct Contact Info */}
             <div className="space-y-3 font-mono text-xs text-slate-300 pt-2">
               <div className="flex items-center gap-3">
