@@ -537,19 +537,19 @@ export const DemoClient: React.FC = () => {
 
                   {/* Footer */}
                   <div className="mt-auto pt-4 border-t border-white/8">
-                    {/* Price & Time */}
+                    {/* Turnaround & Customization Strip */}
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">
-                          Starting From
+                          Customization
                         </p>
-                        <p className="text-xl font-extrabold text-white">
-                          {site.priceFrom}
+                        <p className="text-xs font-bold font-mono text-emerald-400">
+                          100% Tailored
                         </p>
                       </div>
                       <div className="text-right">
                         <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">
-                          Delivery
+                          Turnaround
                         </p>
                         <p
                           className="text-sm font-bold font-mono"

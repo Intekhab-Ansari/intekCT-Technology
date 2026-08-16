@@ -249,11 +249,11 @@ export const HomeDemoWebsites: React.FC = () => {
                   {/* Price & Delivery Strip */}
                   <div className="pt-4 border-t border-white/8 flex items-center justify-between">
                     <div>
-                      <p className="text-[10px] font-mono text-slate-400 uppercase">Starting From</p>
-                      <p className="text-lg font-extrabold text-white font-mono">{demo.priceFrom}</p>
+                      <p className="text-[10px] font-mono text-slate-400 uppercase">Customization</p>
+                      <p className="text-xs font-bold text-emerald-400 font-mono">100% Tailored Build</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[10px] font-mono text-slate-400 uppercase">Delivery</p>
+                      <p className="text-[10px] font-mono text-slate-400 uppercase">Turnaround</p>
                       <p
                         className="text-xs font-bold font-mono"
                         style={{ color: demo.accentColor }}

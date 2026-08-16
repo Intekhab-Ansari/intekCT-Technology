@@ -116,7 +116,6 @@ const jsonLdSchema = {
       "@id": "https://intekct.com/#service",
       name: "IntekCT Web Development & DevSecOps",
       url: "https://intekct.com",
-      priceRange: "₹10,000 - ₹5,00,000",
       telephone: "+91-9594292262",
       address: {
         "@type": "PostalAddress",

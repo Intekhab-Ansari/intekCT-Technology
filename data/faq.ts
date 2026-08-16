@@ -2,7 +2,7 @@ export interface FAQItem {
   id: string;
   question: string;
   answer: string;
-  category: "Security" | "Development" | "Pricing & Process";
+  category: "Security" | "Development" | "Process & Delivery";
 }
 
 export const faqData: FAQItem[] = [
@@ -22,7 +22,7 @@ export const faqData: FAQItem[] = [
     id: "faq-3",
     question: "How long does it take to build my website or app?",
     answer: "A simple website or basic app is usually ready in 2 to 4 weeks. A more complete app with custom features, user accounts, and payment processing typically takes 4 to 8 weeks. We'll give you a clear timeline before we start and keep you updated throughout.",
-    category: "Pricing & Process",
+    category: "Process & Delivery",
   },
   {
     id: "faq-4",
@@ -40,6 +40,6 @@ export const faqData: FAQItem[] = [
     id: "faq-6",
     question: "What happens after my website goes live?",
     answer: "We don't just build and disappear. Every project includes a support period after launch (30 to 90 days depending on your package). We also offer ongoing maintenance plans to keep your site updated, secure, and running smoothly — so you can focus on your business.",
-    category: "Pricing & Process",
+    category: "Process & Delivery",
   },
 ];

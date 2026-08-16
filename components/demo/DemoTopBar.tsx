@@ -17,8 +17,8 @@ import {
 interface DemoTopBarProps {
   templateName: string;
   category: string;
-  priceFrom: string;
   deliveryTime: string;
+  priceFrom?: string;
 }
 
 const allDemos = [
@@ -33,7 +33,6 @@ const allDemos = [
 export const DemoTopBar: React.FC<DemoTopBarProps> = ({
   templateName,
   category,
-  priceFrom,
   deliveryTime,
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -115,12 +114,12 @@ export const DemoTopBar: React.FC<DemoTopBarProps> = ({
           </div>
         </div>
 
-        {/* Center / Right: Pricing, CTA & Fullscreen */}
+        {/* Center / Right: CTA & Fullscreen */}
         <div className="flex items-center gap-2 sm:gap-3 ml-auto">
-          <div className="hidden lg:flex items-center gap-2.5 text-slate-300 font-mono text-[11px]">
-            <span>From <strong className="text-white">{priceFrom}</strong></span>
+          <div className="hidden lg:flex items-center gap-2 text-slate-300 font-mono text-[11px]">
+            <span>Fast Turnaround: <strong className="text-emerald-400">{deliveryTime}</strong></span>
             <span>•</span>
-            <span>Delivery: <strong className="text-emerald-400">{deliveryTime}</strong></span>
+            <span className="text-cyan-300 font-semibold">100% Custom Built</span>
           </div>
 
           <Link

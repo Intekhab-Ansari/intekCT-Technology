@@ -63,13 +63,6 @@ const pages = [
     color: "#FF5A1F",
   },
   {
-    href: "/pricing",
-    icon: DollarSign,
-    label: "Pricing",
-    desc: "Simple, transparent packages",
-    color: "#00F2FE",
-  },
-  {
     href: "/our-work",
     icon: Briefcase,
     label: "Our Work",

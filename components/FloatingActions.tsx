@@ -18,7 +18,7 @@ export const FloatingActions: React.FC = () => {
     {
       role: "assistant",
       content:
-        "Hello! I am the IntekCT AI Assistant capability demo.\n\nAsk me anything about our full-stack web engineering, penetration testing, DevSecOps pipelines, or pricing options!",
+        "Hello! I am the IntekCT AI Assistant capability demo.\n\nAsk me anything about our full-stack web engineering, penetration testing, DevSecOps pipelines, or custom website builds!",
     },
   ]);
   const [input, setInput] = useState("");
@@ -68,7 +68,7 @@ export const FloatingActions: React.FC = () => {
 
   const quickPrompts = [
     "What services do you offer?",
-    "What is your pricing?",
+    "How do we get started?",
     "How do you handle security?",
     "Book a discovery call",
   ];
