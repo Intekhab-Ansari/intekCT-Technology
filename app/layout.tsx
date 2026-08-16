@@ -109,6 +109,7 @@ const jsonLdSchema = {
         alternateName: ["IntekCT Technologies", "Intek CT"],
       },
       sameAs: [
+        "https://www.instagram.com/intekct/",
         "https://intekhab-ansari.vercel.app/",
         "https://github.com/Intekhab-Ansari",
       ],

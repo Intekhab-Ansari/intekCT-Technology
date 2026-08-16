@@ -10,6 +10,7 @@ export const companyData = {
   systemStatus: "Online & Ready",
   whatsappUrl: "https://wa.me/919594292262",
   socials: {
+    instagram: "https://www.instagram.com/intekct/",
     github: "https://github.com/intekct",
     linkedin: "https://linkedin.com/company/intekct",
     twitter: "https://twitter.com/intekct",

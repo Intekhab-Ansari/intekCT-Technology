@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Shield, Github, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import { Shield, Github, Linkedin, Twitter, Instagram, ArrowUp } from "lucide-react";
 import { companyData } from "@/data/company";
 
 export const Footer: React.FC = () => {
@@ -70,6 +70,14 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 font-mono">{companyData.location}</p>
             
             <div className="flex items-center gap-3 pt-2">
+              <a
+                href={companyData.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-[#0B2240] border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
               <a
                 href={companyData.socials.github}
                 target="_blank"

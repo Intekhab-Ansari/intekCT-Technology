@@ -13,6 +13,7 @@ import {
   Clock,
   Phone,
   MessageSquare,
+  Instagram,
   Github,
   Linkedin,
   Twitter
@@ -156,6 +157,15 @@ const ContactFormInner: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex items-center gap-3 pt-4 border-t border-slate-800">
+              <a
+                href={companyData.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-[#0B2240] border border-slate-800 flex items-center justify-center text-slate-400 hover:text-pink-400 hover:border-pink-500/50 transition-colors"
+                aria-label="Instagram @intekct"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
               <a
                 href={companyData.socials.github}
                 target="_blank"
