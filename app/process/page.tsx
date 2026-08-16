@@ -5,11 +5,14 @@ export const metadata: Metadata = {
   title: "How We Work | IntekCT Technologies",
   description:
     "Our transparent, step-by-step process — from discovery to launch. See how IntekCT turns your vision into secure, production-ready software.",
+  alternates: {
+    canonical: "/process",
+  },
   openGraph: {
     title: "How We Work | IntekCT Technologies",
     description:
       "Our transparent, step-by-step process and the tech stack powering your next product.",
-    url: "https://intekct.com/process",
+    url: "https://intek-ct-technology.vercel.app/process",
   },
 };
 

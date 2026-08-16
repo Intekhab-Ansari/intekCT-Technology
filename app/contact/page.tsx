@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Contact Us & Request a Project Quote | IntekCT Technologies",
     description:
       "Start your project with IntekCT. Send us a message and we'll get back to you within 24 hours.",
-    url: "https://intekct.com/contact",
+    url: "https://intek-ct-technology.vercel.app/contact",
   },
 };
 

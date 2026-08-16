@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Web Engineering & Cybersecurity Services | IntekCT Technologies",
     description:
       "Full-stack web development, DevSecOps, cloud security, and more. Explore what IntekCT builds for you.",
-    url: "https://intekct.com/services",
+    url: "https://intek-ct-technology.vercel.app/services",
   },
 };
 

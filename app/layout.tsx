@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   authors: [{ name: "IntekCT Technologies", url: "https://intekhab-ansari.vercel.app/" }],
   creator: "Intekhab Ansari",
   publisher: "IntekCT Technologies",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://intekct.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://intek-ct-technology.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "IntekCT Technologies | Robust Web Software & Custom Web Apps",
     description:
       "Full-stack web software, custom websites, e-commerce platforms, and interactive demo templates for doctors, lawyers, restaurants, and businesses.",
-    url: "https://intekct.com",
+    url: "https://intek-ct-technology.vercel.app",
     siteName: "IntekCT Technologies",
     locale: "en_US",
     type: "website",
@@ -98,11 +98,11 @@ const jsonLdSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://intekct.com/#organization",
+      "@id": "https://intek-ct-technology.vercel.app/#organization",
       name: "IntekCT Technologies",
       alternateName: ["IntekCT", "Intek CT", "IntekCT Web Development", "intekct.com"],
-      url: "https://intekct.com",
-      logo: "https://intekct.com/logo.jpg",
+      url: "https://intek-ct-technology.vercel.app",
+      logo: "https://intek-ct-technology.vercel.app/logo.jpg",
       brand: {
         "@type": "Brand",
         name: "IntekCT",
@@ -128,10 +128,10 @@ const jsonLdSchema = {
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://intekct.com/#service",
+      "@id": "https://intek-ct-technology.vercel.app/#service",
       name: "IntekCT Web Development & DevSecOps",
       alternateName: "IntekCT",
-      url: "https://intekct.com",
+      url: "https://intek-ct-technology.vercel.app",
       telephone: "+91-9594292262",
       address: {
         "@type": "PostalAddress",
@@ -144,13 +144,13 @@ const jsonLdSchema = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://intekct.com/#website",
-      url: "https://intekct.com",
+      "@id": "https://intek-ct-technology.vercel.app/#website",
+      url: "https://intek-ct-technology.vercel.app",
       name: "IntekCT Technologies",
       alternateName: "IntekCT",
       description: "We Build Robust Web Software. Shielded From Day One.",
       publisher: {
-        "@id": "https://intekct.com/#organization",
+        "@id": "https://intek-ct-technology.vercel.app/#organization",
       },
     },
   ],

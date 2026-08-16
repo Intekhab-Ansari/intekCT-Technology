@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions (FAQ) | IntekCT Technologies",
     description:
       "Got questions? We've got answers. Common questions about working with IntekCT.",
-    url: "https://intekct.com/faq",
+    url: "https://intek-ct-technology.vercel.app/faq",
   },
 };
 
