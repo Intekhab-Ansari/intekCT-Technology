@@ -2,11 +2,21 @@ import type { Metadata } from "next";
 import { FAQSection } from "@/components/FAQSection";
 
 export const metadata: Metadata = {
-  title: "FAQ | IntekCT Technologies",
+  title: "Frequently Asked Questions (FAQ) | IntekCT Technologies",
   description:
-    "Answers to the most common questions about IntekCT's web development, security services, timelines, and how to get started.",
+    "Got questions about web development costs, timelines, tech stack, custom features, or DevSecOps security? Read our answers or chat with our team.",
+  keywords: [
+    "Web Development FAQ",
+    "Website Cost India FAQ",
+    "Next.js Development Timeline",
+    "Website Maintenance Questions",
+    "IntekCT Technologies FAQ",
+  ],
+  alternates: {
+    canonical: "/faq",
+  },
   openGraph: {
-    title: "FAQ | IntekCT Technologies",
+    title: "Frequently Asked Questions (FAQ) | IntekCT Technologies",
     description:
       "Got questions? We've got answers. Common questions about working with IntekCT.",
     url: "https://intekct.com/faq",

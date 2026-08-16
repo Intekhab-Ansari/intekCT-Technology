@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import { PricingSection } from "@/components/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Pricing | IntekCT Technologies",
+  title: "Website Development & Software Pricing Packages | IntekCT Technologies",
   description:
-    "Simple, transparent pricing for web development and security services. Choose the package that fits your business and budget.",
+    "Transparent pricing for custom website design, React/Next.js web apps, e-commerce stores, and DevSecOps security packages. Starting from ₹9,999 with no hidden fees.",
+  keywords: [
+    "Website Development Pricing India",
+    "Affordable Web Design Packages",
+    "Next.js Development Cost",
+    "E-Commerce Website Cost",
+    "WordPress Website Pricing",
+    "IntekCT Pricing",
+  ],
+  alternates: {
+    canonical: "/pricing",
+  },
   openGraph: {
-    title: "Pricing | IntekCT Technologies",
+    title: "Website Development & Software Pricing Packages | IntekCT Technologies",
     description:
       "No hidden fees. Pick the plan that fits. IntekCT pricing for websites, web apps, and security packages.",
     url: "https://intekct.com/pricing",

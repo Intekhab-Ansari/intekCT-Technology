@@ -1,9 +1,32 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { WhatWeBuild } from "@/components/WhatWeBuild";
 import { HomeLiveWork } from "@/components/HomeLiveWork";
 import { HomeDemoWebsites } from "@/components/HomeDemoWebsites";
+
+export const metadata: Metadata = {
+  title: "IntekCT Technologies | Web Development & DevSecOps Engineering Agency",
+  description:
+    "Top-rated web development agency building robust full-stack React & Next.js web applications, e-commerce stores, and secure websites. Explore live projects & ready demo websites.",
+  keywords: [
+    "Web Development Company India",
+    "Next.js React Full Stack Development",
+    "Affordable Website Design Mumbai",
+    "Doctor Clinic Website Design",
+    "Advocate Law Firm Website",
+    "Restaurant Digital Menu Online Ordering",
+    "E-Commerce Store Development",
+    "Real Estate Property Website",
+    "Gym Fitness Studio Website",
+    "IntekCT Technologies",
+    "Intekhab Ansari Lead Software Engineer",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+};
 import {
   Code2,
   GitBranch,

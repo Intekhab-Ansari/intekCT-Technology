@@ -2,11 +2,21 @@ import type { Metadata } from "next";
 import { ContactSection } from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact | IntekCT Technologies",
+  title: "Contact Us & Request a Project Quote | IntekCT Technologies",
   description:
-    "Ready to start a project? Get in touch with IntekCT — we respond fast and love talking about ambitious ideas.",
+    "Ready to build your next website or software project? Contact IntekCT Technologies via form, direct call, or WhatsApp at +91 9594292262 for an instant custom quote.",
+  keywords: [
+    "Contact IntekCT Technologies",
+    "Request Website Quote",
+    "Hire Web Developer Mumbai",
+    "WhatsApp Web Developer",
+    "IntekCT Phone Number",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
-    title: "Contact | IntekCT Technologies",
+    title: "Contact Us & Request a Project Quote | IntekCT Technologies",
     description:
       "Start your project with IntekCT. Send us a message and we'll get back to you within 24 hours.",
     url: "https://intekct.com/contact",

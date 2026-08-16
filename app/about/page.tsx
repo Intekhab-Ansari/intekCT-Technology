@@ -4,6 +4,22 @@ import { MeetDeveloper } from "@/components/MeetDeveloper";
 import { Testimonials } from "@/components/Testimonials";
 import { AIAssistantSection } from "@/components/AIAssistantSection";
 
+export const metadata: Metadata = {
+  title: "About Us & Meet Your Lead Developer | IntekCT Technologies",
+  description:
+    "Learn about IntekCT Technologies and Lead Software Engineer Intekhab Ansari. Discover our engineering philosophy, full-stack tech stack, client testimonials, and track record.",
+  keywords: [
+    "About IntekCT Technologies",
+    "Intekhab Ansari Lead Developer",
+    "Full Stack Software Engineer Mumbai",
+    "Security-First Web Agency",
+    "Web Engineering Team India",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <div>

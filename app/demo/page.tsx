@@ -2,17 +2,23 @@ import type { Metadata } from "next";
 import { DemoClient } from "./DemoClient";
 
 export const metadata: Metadata = {
-  title: "Demo Websites | IntekCT – See What We Can Build For You",
+  title: "Interactive Demo Websites | IntekCT Technologies – Live Templates Showcase",
   description:
-    "Browse ready-made demo websites for Doctors, Advocates, Restaurants, E-commerce, and more. Built by IntekCT Technologies. Request a custom version today.",
+    "Explore fully-functional interactive demo websites for Doctors, Advocates, Restaurants, Luxury E-Commerce, Real Estate, and Gym Studios. Built with Next.js, React & Tailwind CSS.",
   keywords: [
-    "Demo Websites",
-    "Doctor Website Template",
-    "Advocate Website",
-    "Restaurant Website",
-    "IntekCT Demo",
-    "Web Design Templates",
+    "Interactive Demo Websites",
+    "Doctor Clinic Website Template",
+    "Advocate Law Firm Website Demo",
+    "Restaurant Digital Menu Demo",
+    "E-Commerce Store Website Demo",
+    "Real Estate Portal Demo",
+    "Gym Fitness Studio Website Demo",
+    "Custom Website Templates India",
+    "IntekCT Technologies Demo",
   ],
+  alternates: {
+    canonical: "/demo",
+  },
 };
 
 export default function DemoPage() {

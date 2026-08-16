@@ -3,11 +3,24 @@ import { ServicesMatrix } from "@/components/ServicesMatrix";
 import { CodeShieldShowcase } from "@/components/CodeShieldShowcase";
 
 export const metadata: Metadata = {
-  title: "Services | IntekCT Technologies",
+  title: "Web Engineering & Cybersecurity Services | IntekCT Technologies",
   description:
-    "Full-stack web development, DevSecOps engineering, penetration testing, and cloud security infrastructure — everything your business needs, done right.",
+    "End-to-end full-stack web engineering, custom Next.js/React applications, e-commerce storefronts, DevSecOps pipelines, penetration testing, and AWS/Cloudflare architecture.",
+  keywords: [
+    "Web Engineering Services",
+    "Custom Web Development India",
+    "Next.js Development Agency",
+    "DevSecOps Engineering",
+    "Penetration Testing Services",
+    "E-Commerce Web Development",
+    "API Development & Integration",
+    "Cloud Architecture & Security",
+  ],
+  alternates: {
+    canonical: "/services",
+  },
   openGraph: {
-    title: "Services | IntekCT Technologies",
+    title: "Web Engineering & Cybersecurity Services | IntekCT Technologies",
     description:
       "Full-stack web development, DevSecOps, cloud security, and more. Explore what IntekCT builds for you.",
     url: "https://intekct.com/services",
