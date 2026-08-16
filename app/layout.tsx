@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "googleaa68f65d276e4699",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "V8f0J8ZCCksA3QqysLVFYCU6PckCFFdtCt34JiR86vs",
   },
   icons: {
     icon: [{ url: "/logo.jpg", type: "image/jpeg" }],
