@@ -12,7 +12,9 @@ import {
   Layers,
   Sparkles,
   Lock,
-  CheckCircle2
+  CheckCircle2,
+  MonitorPlay,
+  MessageSquare,
 } from "lucide-react";
 import { companyData } from "@/data/company";
 
@@ -76,17 +78,50 @@ export const Hero: React.FC = () => {
             </motion.p>
 
             {/* Action Buttons */}
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white rounded-xl bg-coral hover:bg-coral-hover shadow-coral transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold text-white rounded-xl bg-coral hover:bg-coral-hover shadow-coral transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
 
+              <a
+                href="/demo"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 text-sm sm:text-base font-bold text-white rounded-xl bg-[#0B2240] hover:bg-[#0E2C52] border border-[#00F2FE]/40 hover:border-[#00F2FE] transition-all duration-300 transform hover:scale-[1.02]"
+              >
+                <MonitorPlay className="w-4 h-4 text-[#00F2FE]" />
+                <span>Explore 10+ Live Demos</span>
+              </a>
 
+              <a
+                href="https://wa.me/919594292262?text=Hello%20IntekCT,%20I%20want%20to%20discuss%20a%20website%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-4 text-sm font-semibold text-emerald-400 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition-all"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>WhatsApp</span>
+              </a>
+            </motion.div>
 
+            {/* Quick Guarantees Under CTA */}
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-slate-400 font-mono pt-1">
+              <span className="flex items-center gap-1.5 text-emerald-400">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>3–7 Days Delivery</span>
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1.5 text-cyan-300">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Free SSL & SEO Setup</span>
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1.5 text-amber-400">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Direct Developer Contact</span>
+              </span>
             </motion.div>
 
             {/* Key Metrics Strip */}

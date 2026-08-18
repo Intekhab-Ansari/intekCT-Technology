@@ -5,11 +5,32 @@ import { Hero } from "@/components/Hero";
 import { WhatWeBuild } from "@/components/WhatWeBuild";
 import { HomeLiveWork } from "@/components/HomeLiveWork";
 import { HomeDemoWebsites } from "@/components/HomeDemoWebsites";
+import { WhyIntekCT } from "@/components/WhyIntekCT";
+import { PricingSection } from "@/components/PricingSection";
+import { MeetDeveloper } from "@/components/MeetDeveloper";
+import { Testimonials } from "@/components/Testimonials";
+import { FAQSection } from "@/components/FAQSection";
+import { ContactSection } from "@/components/ContactSection";
+import {
+  Code2,
+  GitBranch,
+  Users,
+  HelpCircle,
+  Mail,
+  Briefcase,
+  Monitor,
+  ArrowRight,
+  ShieldCheck,
+  Zap,
+  Phone,
+  MessageSquare,
+  Sparkles,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IntekCT Technologies | Web Development & DevSecOps Engineering Agency",
+  title: "IntekCT Technologies | Full Stack Web Development & Next.js Agency",
   description:
-    "Top-rated web development agency building robust full-stack React & Next.js web applications, e-commerce stores, and secure websites. Explore live projects & ready demo websites.",
+    "Award-winning web development agency in India. We design & build ultra-fast, high-converting websites, Next.js React web apps, luxury e-commerce stores, and 10+ ready-made demo templates. 3–7 day delivery guaranteed.",
   keywords: [
     "Web Development Company India",
     "Next.js React Full Stack Development",
@@ -20,24 +41,18 @@ export const metadata: Metadata = {
     "E-Commerce Store Development",
     "Real Estate Property Website",
     "Gym Fitness Studio Website",
+    "Education Coaching LMS Website",
+    "Photography Studio Portfolio Website",
+    "Corporate Enterprise IT Website",
+    "Luxury Hotel Resort Website",
     "IntekCT Technologies",
     "Intekhab Ansari Lead Software Engineer",
+    "Hire React Developer India",
   ],
   alternates: {
     canonical: "/",
   },
 };
-import {
-  Code2,
-  GitBranch,
-  Users,
-  DollarSign,
-  HelpCircle,
-  Mail,
-  Briefcase,
-  Monitor,
-  ArrowRight,
-} from "lucide-react";
 
 // ─── Quick-nav page cards ─────────────────────────────────────────────────────
 const pages = [
@@ -72,8 +87,8 @@ const pages = [
   {
     href: "/demo",
     icon: Monitor,
-    label: "Demo Sites",
-    desc: "Live previews of our work",
+    label: "10+ Demo Sites",
+    desc: "Interactive live templates",
     color: "#00F2FE",
   },
   {
@@ -95,24 +110,41 @@ const pages = [
 // ─── Page ────────────────────────────────────────────────────────────────────
 export default function Home() {
   return (
-    <div>
-      {/* Hero — eager, above the fold */}
+    <div className="space-y-0 selection:bg-[#FF5A1F] selection:text-white">
+      {/* 1. Hero Section — eager, above the fold */}
       <Hero />
 
-      {/* What We Build — Core Services & Expertise */}
+      {/* 2. What We Build — Core Services & Expertise */}
       <WhatWeBuild />
 
-      {/* 1. Our Live Work — Production Projects & Case Studies */}
+      {/* 3. Our Live Work — Production Projects & Case Studies */}
       <HomeLiveWork />
 
-      {/* 2. Ready-Made Demo Websites — Industry Templates with Live Previews */}
+      {/* 4. Ready-Made Demo Websites — 10 Industry Templates with Live Previews */}
       <HomeDemoWebsites />
 
-      {/* Quick-Nav Strip */}
+      {/* 5. Why Choose IntekCT — 6 Core Value Guarantees */}
+      <WhyIntekCT />
+
+      {/* 6. Transparent Pricing & Packages */}
+      <PricingSection />
+
+      {/* 7. Meet The Lead Developer — Intekhab Ansari */}
+      <MeetDeveloper compact={true} />
+
+      {/* 8. Client Testimonials & Social Proof */}
+      <Testimonials />
+
+      {/* 9. Frequently Asked Questions (FAQ) */}
+      <FAQSection />
+
+      {/* 10. Interactive Contact & Instant Quote Form */}
+      <ContactSection />
+
+      {/* 11. Quick-Nav Strip */}
       <section className="relative py-20 bg-[#040D1A]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#061B36] to-[#040D1A] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
           {/* Header */}
           <div className="text-center mb-14 space-y-3">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B2240] border border-slate-700/80 text-slate-300 text-xs font-mono tracking-wider">
@@ -180,4 +212,3 @@ export default function Home() {
     </div>
   );
 }
-

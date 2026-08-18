@@ -15,6 +15,10 @@ import {
   Home as HomeIcon,
   Dumbbell,
   MonitorPlay,
+  GraduationCap,
+  Camera,
+  Building2,
+  Waves,
 } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -93,6 +97,34 @@ export const Navbar: React.FC = () => {
       icon: Dumbbell,
       color: "#EF4444",
       desc: "Membership tiers & 1-day pass claim",
+    },
+    {
+      title: "Education Academy",
+      href: "/demo/education",
+      icon: GraduationCap,
+      color: "#7C3AED",
+      desc: "Course catalog & demo class booking",
+    },
+    {
+      title: "Photography & Cinema",
+      href: "/demo/photography",
+      icon: Camera,
+      color: "#EC4899",
+      desc: "Masonry lightbox & quote builder",
+    },
+    {
+      title: "Corporate & Enterprise",
+      href: "/demo/corporate",
+      icon: Building2,
+      color: "#2563EB",
+      desc: "B2B solutions & ROI cost estimator",
+    },
+    {
+      title: "Luxury Hotel & Resort",
+      href: "/demo/hotel",
+      icon: Waves,
+      color: "#F59E0B",
+      desc: "Villa reservation & stay search",
     },
   ];
 
@@ -207,7 +239,7 @@ export const Navbar: React.FC = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.96 }}
                       transition={{ duration: 0.18 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[460px] rounded-2xl bg-white border border-slate-200 shadow-2xl p-4 z-50 text-slate-800"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[500px] max-h-[85vh] overflow-y-auto rounded-2xl bg-white border border-slate-200 shadow-2xl p-4 z-50 text-slate-800"
                     >
                       <div className="flex items-center justify-between px-2 pb-2 mb-2 border-b border-slate-100 text-xs font-bold text-slate-500 font-mono uppercase">
                         <span>Interactive Demo Websites</span>

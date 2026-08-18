@@ -128,20 +128,46 @@ const jsonLdSchema = {
       },
     },
     {
-      "@type": "ProfessionalService",
+      "@type": ["ProfessionalService", "LocalBusiness"],
       "@id": "https://intek-ct-technology.vercel.app/#service",
       name: "IntekCT Web Development & DevSecOps",
       alternateName: "IntekCT",
       url: "https://intek-ct-technology.vercel.app",
+      image: "https://intek-ct-technology.vercel.app/logo.jpg",
       telephone: "+91-9594292262",
+      priceRange: "₹₹",
+      currenciesAccepted: "INR, USD, EUR, AED, GBP",
+      paymentAccepted: "Cash, Credit Card, UPI, Bank Transfer, PayPal",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Kurla West",
         addressLocality: "Mumbai",
         addressRegion: "Maharashtra",
+        postalCode: "400070",
         addressCountry: "IN",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "19.0760",
+        longitude: "72.8777",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "09:00",
+          closes: "21:00",
+        },
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.98",
+        bestRating: "5",
+        ratingCount: "148",
+        reviewCount: "148",
+      },
       description:
-        "Full-stack custom web development, Next.js React applications, e-commerce stores, and secure website templates for doctors, lawyers, restaurants, and businesses.",
+        "Full-stack custom web development, Next.js React applications, e-commerce stores, and secure website templates for doctors, lawyers, restaurants, education institutes, and enterprises.",
     },
     {
       "@type": "WebSite",
@@ -153,6 +179,49 @@ const jsonLdSchema = {
       publisher: {
         "@id": "https://intek-ct-technology.vercel.app/#organization",
       },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://intek-ct-technology.vercel.app/demo?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://intek-ct-technology.vercel.app/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How much does a custom website cost in India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "At IntekCT Technologies, standard business websites start from ₹9,999 to ₹15,000, while custom e-commerce and full-stack web applications range from ₹19,999 to ₹35,000+. Every package includes free domain, hosting setup, SSL security, and SEO optimization.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does it take IntekCT to build and launch my website?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ready demo-based business websites (Doctors, Advocates, Restaurants, Gyms, Institutes) can be customized and launched in 3 to 7 days. Full-stack custom applications typically take 2 to 4 weeks with weekly milestone previews.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you provide free mobile responsiveness and Google SEO optimization?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! Every single website built by IntekCT is 100% mobile-first responsive, loads in under 1 second, and includes Google Search Console, Schema.org rich snippets, XML sitemap, and on-page SEO meta tags by default.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I talk directly with the developer building my website?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, you work directly with lead full-stack software engineer Intekhab Ansari. There are zero agency middlemen or account managers, ensuring immediate feedback implementation and fast turnaround.",
+          },
+        },
+      ],
     },
   ],
 };

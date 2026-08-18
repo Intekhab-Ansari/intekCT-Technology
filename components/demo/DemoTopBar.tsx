@@ -28,6 +28,10 @@ const allDemos = [
   { name: "Luxe E-Commerce Store", href: "/demo/ecommerce", category: "Retail" },
   { name: "Luxury Real Estate & Villa", href: "/demo/real-estate", category: "Real Estate" },
   { name: "TitanFit Performance Gym", href: "/demo/gym", category: "Fitness" },
+  { name: "ApexEd Global Academy", href: "/demo/education", category: "Education" },
+  { name: "Lumière Cinematic Studio", href: "/demo/photography", category: "Creative" },
+  { name: "Apexia Global Enterprise", href: "/demo/corporate", category: "Corporate" },
+  { name: "The Grand Azure Resort", href: "/demo/hotel", category: "Hospitality" },
 ];
 
 export const DemoTopBar: React.FC<DemoTopBarProps> = ({
