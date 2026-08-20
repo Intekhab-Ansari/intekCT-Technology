@@ -161,32 +161,32 @@ export const CodeShieldShowcase: React.FC = () => {
             <div className="bg-[#040D1A] p-5 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2 overflow-x-auto">
               {activeElement === "auth" && (
                 <>
-                  <p className="text-slate-500">// Zero-Trust OAuth2 & JWKS Token Verification</p>
+                  <p className="text-slate-500">{"// Zero-Trust OAuth2 & JWKS Token Verification"}</p>
                   <p className="text-cyan-400">const <span className="text-amber-300">claims</span> = await <span className="text-emerald-300">JWKS.verify</span>(jwtToken, &#123;</p>
                   <p className="pl-4 text-slate-300">issuer: <span className="text-emerald-400">&quot;https://auth.intekct.com&quot;</span>,</p>
                   <p className="pl-4 text-slate-300">algorithms: [<span className="text-emerald-400">&quot;RS256&quot;</span>],</p>
                   <p className="text-cyan-400">&#125;);</p>
-                  <p className="text-emerald-400">// Audit: 0 Unauthorized Privilege Escalation</p>
+                  <p className="text-emerald-400">{"// Audit: 0 Unauthorized Privilege Escalation"}</p>
                 </>
               )}
 
               {activeElement === "payment" && (
                 <>
-                  <p className="text-slate-500">// KMS Payload Envelope Encryption (AES-256-GCM)</p>
+                  <p className="text-slate-500">{"// KMS Payload Envelope Encryption (AES-256-GCM)"}</p>
                   <p className="text-cyan-400">const <span className="text-amber-300">cipher</span> = <span className="text-emerald-300">crypto.createCipheriv</span>(</p>
                   <p className="pl-4 text-slate-300"><span className="text-emerald-400">&quot;aes-256-gcm&quot;</span>, kmsKey, nonce</p>
                   <p className="text-cyan-400">);</p>
-                  <p className="text-emerald-400">// PCI-DSS Level 1 Compliant Vault Storage</p>
+                  <p className="text-emerald-400">{"// PCI-DSS Level 1 Compliant Vault Storage"}</p>
                 </>
               )}
 
               {activeElement === "data" && (
                 <>
-                  <p className="text-slate-500">// Prepared Statement Parameterized Query (No SQL Injection)</p>
+                  <p className="text-slate-500">{"// Prepared Statement Parameterized Query (No SQL Injection)"}</p>
                   <p className="text-cyan-400">const result = await <span className="text-emerald-300">prisma.analytics.findMany</span>(&#123;</p>
                   <p className="pl-4 text-slate-300">where: &#123; tenantId: <span className="text-amber-300">sanitized(req.tenant)</span> &#125;,</p>
                   <p className="text-cyan-400">&#125;);</p>
-                  <p className="text-emerald-400">// WAF Rate-Limiting: Allowed 200/200 reqs</p>
+                  <p className="text-emerald-400">{"// WAF Rate-Limiting: Allowed 200/200 reqs"}</p>
                 </>
               )}
             </div>

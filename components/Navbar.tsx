@@ -150,8 +150,8 @@ export const Navbar: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-[#061B36] font-sans flex items-center gap-1">
-                  Intek<span className="text-[#2563EB]">CT</span>
+                <span className="text-xl font-extrabold tracking-tight text-[#061B36] font-sans flex items-center">
+                  Intek<span className="inline-block bg-gradient-to-b from-[#37B8FD] to-[#0069F5] bg-clip-text text-transparent font-black ml-0.5">CT</span>
                 </span>
                 <span className="text-[10px] font-mono text-slate-500 tracking-wider uppercase -mt-1 font-semibold">
                   TECHNOLOGIES

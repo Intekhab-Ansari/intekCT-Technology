@@ -638,7 +638,7 @@ export const DemoClient: React.FC = () => {
             <div className="relative space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 text-[#FF5A1F] text-xs font-mono tracking-widest uppercase font-bold">
                 <Sparkles className="w-3.5 h-3.5" />
-                Don't see your industry?
+                Don&apos;t see your industry?
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
                 We Build{" "}
@@ -647,7 +647,7 @@ export const DemoClient: React.FC = () => {
               <p className="text-slate-400 max-w-xl mx-auto text-base leading-relaxed">
                 From niche local businesses to complex enterprise platforms — if
                 you can imagine it, we can build it. Tell us what you need and
-                we'll send you a free quote in 24 hours.
+                we&apos;ll send you a free quote in 24 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
                 <Link

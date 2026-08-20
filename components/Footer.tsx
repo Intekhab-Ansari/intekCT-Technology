@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 <Shield className="w-5 h-5 text-[#00F2FE]" />
               </div>
               <span className="text-xl font-bold tracking-tight text-white font-sans">
-                Intek<span className="text-[#00F2FE]">CT</span>
+                Intek<span className="inline-block bg-gradient-to-b from-[#37B8FD] to-[#0069F5] bg-clip-text text-transparent font-bold ml-0.5">CT</span>
               </span>
             </Link>
 
